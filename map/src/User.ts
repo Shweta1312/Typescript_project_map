@@ -1,6 +1,7 @@
 import faker from 'faker';
+import { Mappable } from './CustomMap';
 
-export class User {
+export class User implements Mappable {
   //Export this class to index.ts
 
   name: string;
@@ -9,6 +10,7 @@ export class User {
     lat: number;
     lng: number;
   };
+  color: string;
 
   constructor() {
     this.name = faker.name.firstName();
